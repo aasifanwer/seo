@@ -1,0 +1,26 @@
+# Enable the Rewrite Engine
+RewriteEngine On
+
+# Redirect to HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirect to non-www
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+# Remove trailing slashes
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)/$ $1 [L,R=301]
+
+# Remove .html extensions
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R=301]
+
+# Add .html extension if the file exists
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+
+# Remove "/index" from URLs
+RewriteCond %{THE_REQUEST} /index [NC]
+RewriteRule ^(.*)index /$1 [L,R=301]
