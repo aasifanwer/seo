@@ -24,6 +24,3 @@ RewriteRule ^ %{REQUEST_URI}.html [NC,L]
 # Remove "/index" from URLs
 RewriteCond %{THE_REQUEST} /index [NC]
 RewriteRule ^(.*)index /$1 [L,R=301]
-
-# Redirect to new URL
-RewriteRule ^$ https://github.com/aasifanwer/seo/ [L,R=301]
