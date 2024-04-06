@@ -26,4 +26,4 @@ RewriteCond %{THE_REQUEST} /index [NC]
 RewriteRule ^(.*)index /$1 [L,R=301]
 
 # Redirect to new URL
-Redirect 301 /aasifanwer/ https://github.com/aasifanwer/seo/
+RewriteRule ^aasifanwer/$ https://github.com/aasifanwer/seo/ [L,R=301]
