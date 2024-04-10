@@ -33,6 +33,20 @@
 
   gtag('config', 'G-EQDQJX9XHT');
 </script>
+<script>
+  // Redirect URLs ending with ".html" to without ".html"
+  if (location.pathname.endsWith('.html')) {
+    var newURL = location.pathname.slice(0, -5); // Remove the '.html' extension
+    window.location.replace(newURL);
+  }
+
+  // Redirect URLs ending with "index.html" to without "index.html"
+  if (location.pathname.endsWith('index.html')) {
+    var newURL = location.pathname.slice(0, -10); // Remove the 'index.html' part
+    window.location.replace(newURL);
+  }
+</script>
+
 </head>
 
 <body>
