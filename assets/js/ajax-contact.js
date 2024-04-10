@@ -40,7 +40,7 @@ $(function() {
 			if (data.responseText !== '') {
 				$(formMessages).text(data.responseText);
 			} else {
-				$(formMessages).text('Youre Query Has Been send');
+				$(formMessages).text("Thank you for your submission! We'll be in touch soon");
 			}
 		});
 	});
