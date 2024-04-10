@@ -9,7 +9,6 @@ $(function() {
     });
     
     
-    //===== Sticky
 
     $(window).on('scroll', function (event) {
         var scroll = $(window).scrollTop();
