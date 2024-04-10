@@ -34,6 +34,12 @@
   gtag('config', 'G-EQDQJX9XHT');
 </script>
 <script>
+  // Redirect from "www" subdomain to non-www
+  if (location.hostname.startsWith("www.")) {
+    var newURL = "https://" + location.hostname.slice(4) + location.pathname + location.search;
+    window.location.replace(newURL);
+  }
+
   // Redirect URLs ending with ".html" to without ".html"
   if (location.pathname.endsWith('.html')) {
     var newURL = location.pathname.slice(0, -5); // Remove the '.html' extension
@@ -46,7 +52,6 @@
     window.location.replace(newURL);
   }
 </script>
-
 </head>
 
 <body>
