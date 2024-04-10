@@ -3113,7 +3113,7 @@ p.form-message.success, p.form-message.error {
   margin-top: 15px;
   margin-left: 15px; }
   p.form-message.success.form-message.error, p.form-message.error.form-message.error {
-    color: #f00; }
+    color: green; }
 
 .contact-map iframe {
   width: 100%;
